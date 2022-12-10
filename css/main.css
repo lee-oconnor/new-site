@@ -169,6 +169,12 @@ textarea {
   clear: both;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 16px;
   box-sizing: border-box;
@@ -180,6 +186,15 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+}
+
+.homepage-section {
+  background: url("../img/hero.jpg");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 800px;
 }
 nav {
   display: flex;
@@ -198,6 +213,29 @@ nav {
 .header-logo {
   margin-left: 100px;
 }
+.history-section {
+  background: url("../img/history-hero-img.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  margin-top: 0px;
+}
+
+.big-1 {
+  font-family: "Oswald";
+  font-weight: bold;
+  opacity: 0.5;
+  color: #414f6b;
+}
+
+.history-txt {
+  color: #414f6b;
+  font-family: "Oswald";
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-left: -30px;
+  margin-top: 90px;
+}
 
 .history-tab,
 .team-tab {
@@ -206,6 +244,29 @@ nav {
   font-family: "Lato";
   font-size: 0.75em;
   font-style: italic;
+}
+
+.blue-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 190px;
+  background-color: #37445b;
+  opacity: 90%;
+  margin-top: 425px;
+}
+
+.blue-carousel-container > img {
+  width: 15%;
+  margin: 15px 5px;
+}
+
+.climb-section {
+  background: url("../img/climb-hero-img.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 800px;
 }
 
 /* ==========================================================================
@@ -227,14 +288,6 @@ nav {
     width: 50px;
     padding-top: 10px;
     margin-left: 300px;
-  }
-  .homepage-section {
-    background-image: url("../img/hero.jpg");
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 800px;
   }
 
   .mid-logo-section {
@@ -271,22 +324,27 @@ nav {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin-left: 300px;
+    height: 150px;
+    margin: 40px 0px 0px 300px;
+  }
+  .big-1 {
+    margin-bottom: 35px;
+  }
+
+  .history-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 350px 0px 350px;
+    font-family: "Lato";
+    font-weight: lighter;
+    font-size: 1em;
   }
 
   .team-tab-mid {
     color: #000;
   }
 
-  .history-section {
-    background-image: url("../img/history-hero-img.jpg");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
-    margin-top: 0px;
-  }
-
-  }
   .big-1 {
     font-family: "Oswald";
     font-size: 8.5em;
@@ -301,13 +359,6 @@ nav {
     font-weight: bold;
     font-size: 2em;
     margin-bottom: 0px;
-  }
-
-  .climb-section {
-    background-image: url("../img/climb-hero-img.jpg");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
   }
 }
 
