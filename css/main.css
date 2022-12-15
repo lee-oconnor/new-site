@@ -202,6 +202,18 @@ nav {
   justify-content: space-between;
 }
 
+.active-nav {
+  background-color: transparent;
+  color: #414f6b;
+}
+
+.active-nav .nav-container li a {
+  color: #414f6b;
+}
+
+.active-nav > .nav-container > li > a:hover {
+  color: #fff;
+}
 .homepage-section > nav > ul {
   list-style-type: none;
   top: 0;
@@ -217,12 +229,17 @@ nav {
   background: url("../img/history-hero-img.jpg");
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
-  margin-top: 0px;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.big-1 {
+.big-1,
+.big-2 {
   font-family: "Oswald";
+  font-size: 8.5em;
   font-weight: bold;
   opacity: 0.5;
   color: #414f6b;
@@ -235,6 +252,14 @@ nav {
   margin-bottom: 0px;
   margin-left: -30px;
   margin-top: 90px;
+}
+
+.climb-txt {
+  color: #414f6b;
+  font-family: "Oswald";
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 0px;
 }
 
 .history-tab,
@@ -251,32 +276,114 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 265px;
-  flex-direction: column;
+  height: auto;
+  flex-direction: row;
   background-color: #37445b;
   opacity: 90%;
-  margin-top: 453px;
+  margin-top: 457px;
+  position: relative;
+  overflow: hidden;
 }
 
-.scroll-dots > button {
-  width: 20px;
-  height: 20px;
-  background-color: #ffffff;
-  border: none;
-  border-radius: 100%;
-  margin: 5px;
+.img-container {
+  padding: 30px;
+  width: 800px;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-left: 0px;
+}
+
+.img-container::-webkit-scrollbar {
+  display: none;
 }
 
 .blue-carousel-container > img {
   width: 15%;
   margin: 15px 5px;
+  overflow: hidden;
+  position: relative;
+  object-fit: cover;
+}
+
+.pre-btn,
+.nxt-btn {
+  background: lightgrey;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 10px;
+  margin-top: 25px;
 }
 
 .climb-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px 0px 300px;
+}
+
+.climb-p {
+  width: 60%;
+}
+
+.climb-txt {
+  padding: 30px;
+  margin-left: -59px;
+  margin-bottom: -34px;
+}
+
+.schedule-section {
   background: url("../img/climb-hero-img.jpg");
   background-repeat: no-repeat;
   width: 100%;
+  height: auto;
   min-height: 800px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #414f6b;
+}
+
+.mountain-tabs {
+  width: 100%;
+  background-color: #414f6b;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #414f6b;
+}
+
+.footer-logo {
+  width: 50%;
+  display: flex;
+}
+.footer-logo-img {
+  margin: 20px;
+}
+
+.footer-company {
+  width: 110px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.5em;
+  color: #63769d;
+  line-height: 0.8;
+  margin-top: 25px;
+  margin-left: -10px;
+}
+
+.copyright {
+  font-family: "Lato", italic;
+  font-size: 0.75em;
+  color: #63769d;
+  margin-right: 20px;
 }
 
 /* ==========================================================================
@@ -331,10 +438,11 @@ nav {
 
   .big-history-div {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-flow: row;
+    justify-content: center;
     align-items: center;
     height: 150px;
+    width: 100%;
     margin: 40px 0px 0px 300px;
   }
   .big-1 {
