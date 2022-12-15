@@ -249,9 +249,10 @@ nav {
   color: #414f6b;
   font-family: "Oswald";
   font-weight: bold;
-  margin-bottom: 0px;
-  margin-left: -30px;
-  margin-top: 90px;
+  padding: 30px;
+  margin-left: -59px;
+  margin-bottom: -34px;
+  margin-top: 88px;
 }
 
 .climb-txt {
@@ -321,7 +322,6 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 40px 0px 0px 300px;
 }
 
 .climb-p {
@@ -441,19 +441,15 @@ footer {
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    height: auto;
     width: 100%;
-    margin: 40px 0px 0px 300px;
   }
   .big-1 {
     margin-bottom: 35px;
   }
 
   .history-p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px 350px 0px 350px;
+    width: 60%;
     font-family: "Lato";
     font-weight: lighter;
     font-size: 1em;
