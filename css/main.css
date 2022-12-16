@@ -344,12 +344,16 @@ nav {
   align-items: center;
 }
 .mountainOne {
-  color: #fff;
+  color: #b0b4be;
   font-family: "Oswald";
   font-weight: bold;
   font-size: 1.5em;
   margin: 30px;
   margin-left: 300px;
+  height: 100px;
+  padding: 32px;
+  width: 140px;
+  text-align: center;
 }
 
 .mountainTwo {
@@ -358,6 +362,15 @@ nav {
   font-weight: bold;
   font-size: 1.5em;
   margin: 30px;
+  height: 100px;
+  padding: 32px;
+  width: 140px;
+  text-align: center;
+}
+
+.active-mtn-tab {
+  background-color: #b0b4be;
+  color: #414f6b;
 }
 .schedule-section {
   background: url("../img/climb-hero-img.jpg");
@@ -383,11 +396,23 @@ nav {
   margin-left: 300px;
   margin-top: 100px;
 }
+
+.schedule-heading {
+  font-family: "Oswald";
+  font-weight: bold;
+  font-size: 2em;
+  color: #414f6b;
+}
 .schedule-details {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
   align-items: flex-start;
+  margin: 38px;
+  width: 80%;
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 1.2em;
 }
 .schedule-col-1 {
   width: 50%;
