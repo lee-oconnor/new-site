@@ -1,4 +1,4 @@
-// const carouselImages = document.querySelector(".img-div");
+// const carouselImages = document.querySelector(".img-container");
 
 // let slidePosition = 0;
 
