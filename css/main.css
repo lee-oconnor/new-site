@@ -303,6 +303,10 @@ body {
   margin-top: 25px;
 }
 
+.nxt-btn {
+  margin-left: 10px;
+}
+
 .climb-section {
   display: flex;
   flex-direction: row;
