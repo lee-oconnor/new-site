@@ -26,3 +26,11 @@ window.addEventListener("scroll", () => {
     nav.classList.remove("active-nav");
   }
 });
+
+//To make schedule change when toggling between Mountain Tabs
+
+const activeMode = document.querySelector(".active-mtn-tab");
+const mountainOne = document.querySelector(".mountainOne");
+const mountainTwo = document.querySelector(".mountainTwo");
+
+mountainOne.addEventListener("click", () => {});
