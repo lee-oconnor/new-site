@@ -373,6 +373,7 @@ body {
 .schedule-section {
   background: url("../img/climb-hero-img.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: auto;
   min-height: 800px;
@@ -382,6 +383,7 @@ body {
   justify-content: space-between;
   background-color: #414f6b;
 }
+
 .schedule-box {
   display: flex;
   flex-flow: column;

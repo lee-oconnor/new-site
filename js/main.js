@@ -71,4 +71,7 @@ mountainTwo.addEventListener("click", () => {
             <span>Vestibulum viverra</span>
   </div>
   `;
+  document.querySelector(".schedule-section").style.backgroundImage =
+    "url('./img/mountain3.jpg')";
+  document.querySelector(".schedule-section").style.backgroundSize = "cover";
 });
