@@ -33,4 +33,12 @@ const activeMode = document.querySelector(".active-mtn-tab");
 const mountainOne = document.querySelector(".mountainOne");
 const mountainTwo = document.querySelector(".mountainTwo");
 
-mountainOne.addEventListener("click", () => {});
+mountainOne.addEventListener("click", () => {
+  mountainTwo.classList.remove("active-mtn-tab");
+  mountainOne.classList.add("active-mtn-tab");
+});
+
+mountainTwo.addEventListener("click", () => {
+  mountainOne.classList.remove("active-mtn-tab");
+  mountainTwo.classList.add("active-mtn-tab");
+});
