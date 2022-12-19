@@ -28,53 +28,35 @@ window.addEventListener("scroll", () => {
 });
 
 //To make schedule change when toggling between Mountain Tabs
-
-const activeMode = document.querySelector(".active-mtn-tab");
+const scheduleSection = document.querySelector(".schedule-section");
 const mountainOne = document.querySelector(".mountainOne");
 const mountainTwo = document.querySelector(".mountainTwo");
 const scheduleDetails = document.querySelector(".schedule-details");
+const colOneSchedule = document.querySelector(".schedule-col-1");
 
 mountainOne.addEventListener("click", () => {
-  mountainTwo.classList.remove("active-mtn-tab");
-  mountainOne.classList.add("active-mtn-tab");
-  scheduleDetails.innerHTML = `
-    <div class="schedule-col-1">
-      <span>8 Feb 2017</span><br>
-      <span>22 Feb 2017</span><br>
-      <span>17 Mar 2017</span><br>
-      <span>7 Apr 2017</span>
-    </div>
-    <div class="schedule-col-2">
-      <span>Vestibulum viverra</span><br>
-      <span>Vestibulum viverra</span><br>
-      <span>Vestibulum viverra</span><br>
-      <span>Vestibulum viverra</span>
-    </div>
-  `;
-  document.querySelector(".schedule-section").style.backgroundImage =
-    "url('./img/climb-hero-img.jpg')";
-  document.querySelector(".schedule-section").style.backgroundSize = "cover";
+  mountainTwo.classList.remove("active-mtn-tabs");
+  mountainOne.classList.add("active-mtn-tabs");
+  colOneSchedule.innerHTML = `
+    <span>8 Feb 2017</span><br>
+    <span>22 Feb 2017</span><br>
+    <span>17 Mar 2017</span><br>
+    <span>7 Apr 2017</span>
+    `;
+  scheduleSection.style.backgroundImage = "url('./img/climb-hero-img.jpg')";
+  scheduleSection.style.backgroundSize = "cover";
 });
 
 mountainTwo.addEventListener("click", () => {
-  mountainOne.classList.remove("active-mtn-tab");
-  mountainTwo.classList.add("active-mtn-tab");
-  scheduleDetails.innerHTML = "";
-  scheduleDetails.innerHTML = `
-  <div class="schedule-col-1">
-            <span>25 Nov 2016</span><br>
-            <span>28 Nov 2016</span><br>
-            <span>18 Dec 2016</span><br>
-            <span>7 Jan 2017</span>
-  </div>
-  <div class="schedule-col-2">
-            <span>Vestibulum viverra</span><br>
-            <span>Vestibulum viverra</span><br>
-            <span>Vestibulum viverra</span><br>
-            <span>Vestibulum viverra</span>
-  </div>
+  mountainOne.classList.remove("active-mtn-tabs");
+  mountainTwo.classList.add("active-mtn-tabs");
+  colOneSchedule.innerHTML = "";
+  colOneSchedule.innerHTML = `
+    <span>25 Nov 2016</span><br>
+    <span>28 Nov 2016</span><br>
+    <span>18 Dec 2016</span><br>
+    <span>7 Jan 2017</span>
   `;
-  document.querySelector(".schedule-section").style.backgroundImage =
-    "url('./img/mountain3.jpg')";
-  document.querySelector(".schedule-section").style.backgroundSize = "cover";
+  scheduleSection.style.backgroundImage = "url('./img/mountain3.jpg')";
+  scheduleSection.style.backgroundSize = "cover";
 });

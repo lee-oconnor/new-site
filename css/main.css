@@ -367,10 +367,22 @@ body {
   text-align: center;
 }
 
-.active-mtn-tab {
+.active-mtn-tabs {
   background-color: #b0b4be;
   color: #414f6b;
   cursor: pointer;
+}
+
+.active-mtnOne {
+  background: url("../img/climb-hero-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.active-mtnTwo {
+  background: url("../img/mountain3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .schedule-section {
