@@ -51,6 +51,9 @@ mountainOne.addEventListener("click", () => {
       <span>Vestibulum viverra</span>
     </div>
   `;
+  document.querySelector(".schedule-section").style.backgroundImage =
+    "url('./img/climb-hero-img.jpg')";
+  document.querySelector(".schedule-section").style.backgroundSize = "cover";
 });
 
 mountainTwo.addEventListener("click", () => {
