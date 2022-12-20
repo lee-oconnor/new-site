@@ -181,11 +181,27 @@ html {
   margin: 0;
 }
 
+/******************Mobile Styles******************/
+
 body {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+.nav-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .hide {
@@ -206,11 +222,14 @@ body {
 }
 
 .homepage-section {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
   background: url("../img/hero.jpg");
-  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  min-height: 500px;
 }
 
 .homepage-section > nav > ul {
@@ -219,6 +238,12 @@ body {
   position: fixed;
   right: 250px;
   margin: 0;
+}
+
+.header-logo {
+  width: 50px;
+  padding-top: 10px;
+  margin-left: 300px;
 }
 
 .history-section {
@@ -238,6 +263,22 @@ body {
   color: #414f6b;
   font-family: "Oswald";
   font-weight: bold;
+}
+
+.mid-logo-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 300px;
+  background-color: #fff;
+  width: 100%;
+  height: 75px;
+}
+
+.mid-section-nav > li {
+  list-style-type: none;
+  color: #414f6b;
 }
 
 .climb-txt {
@@ -283,6 +324,10 @@ body {
   scroll-behavior: smooth;
   padding-left: 0px;
 }
+.logo {
+  width: 45px;
+  padding: 2px;
+}
 
 .img-container::-webkit-scrollbar {
   display: none;
@@ -317,6 +362,56 @@ body {
   margin-left: 10px;
 }
 
+.big-history-div {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.big-1,
+.big-2 {
+  font-family: "Oswald";
+  font-size: 8.5em;
+  font-weight: bold;
+  opacity: 0.5;
+  color: #414f6b;
+}
+
+.history-txt {
+  padding: 30px;
+  margin-left: -59px;
+  margin-bottom: -34px;
+  margin-top: 88px;
+  color: #414f6b;
+  font-family: "Oswald";
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+
+.history-p {
+  width: 60%;
+  font-family: "Lato";
+  font-weight: lighter;
+  font-size: 1em;
+}
+
+.team-tab-mid {
+  color: #000;
+}
+
+.big-1 {
+  font-family: "Oswald";
+  font-size: 8.5em;
+  font-weight: bold;
+  opacity: 0.5;
+  color: #414f6b;
+  margin-bottom: 35px;
+}
+
 .climb-section {
   display: flex;
   flex-direction: row;
@@ -334,6 +429,9 @@ body {
   margin-bottom: -34px;
 }
 
+.los-angeles-mid {
+  width: 100px;
+}
 .mountain-tabs {
   width: 100%;
   background-color: #414f6b;
@@ -342,6 +440,7 @@ body {
   flex-flow: row;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
 }
 .mountainOne {
   color: #b0b4be;
@@ -362,7 +461,6 @@ body {
   font-size: 1.5em;
   padding-top: 25px;
   height: 75px;
-
   width: 140px;
   text-align: center;
 }
@@ -371,18 +469,6 @@ body {
   background-color: #b0b4be;
   color: #414f6b;
   cursor: pointer;
-}
-
-.active-mtnOne {
-  background: url("../img/climb-hero-img.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.active-mtnTwo {
-  background: url("../img/mountain3.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .schedule-section {
@@ -400,19 +486,6 @@ body {
 }
 
 .schedule-box {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  width: 450px;
-  height: 250px;
-  opacity: 80%;
-  margin-left: 300px;
-  margin-top: 100px;
-}
-
-.schedule-box-mtn-two {
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -598,6 +671,11 @@ footer {
     margin-left: -59px;
     margin-bottom: -34px;
     margin-top: 88px;
+    color: #414f6b;
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 0px;
   }
 
   .history-p {
@@ -619,17 +697,197 @@ footer {
     color: #414f6b;
   }
 
-  .history-txt {
-    color: #414f6b;
-    font-family: "Oswald";
-    font-weight: bold;
-    font-size: 2em;
-    margin-bottom: 0px;
+  .climb-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .climb-p {
+    width: 60%;
   }
 
   .climb-txt {
     font-size: 2em;
-    margin-bottom: -30px;
+    padding: 30px;
+    margin-left: -59px;
+    margin-bottom: -34px;
+  }
+  .blue-carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    background-color: #37445b;
+    opacity: 90%;
+    margin-top: 457px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img-container {
+    padding: 30px;
+    width: 800px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-left: 0px;
+  }
+  .img-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .blue-carousel-container > img {
+    width: 15%;
+    margin: 15px 5px;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+  }
+
+  .pre-btn,
+  .nxt-btn {
+    background: lightgrey;
+    border: none;
+    color: #414f6b;
+    padding: 8px;
+    margin: 10px;
+    margin-top: 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .nxt-btn {
+    margin-left: 10px;
+  }
+  .mountain-tabs {
+    width: 100%;
+    background-color: #414f6b;
+    height: 75px;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .mountainOne {
+    color: #b0b4be;
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-top: 25px;
+    margin-left: 300px;
+    height: 75px;
+    width: 140px;
+    text-align: center;
+  }
+
+  .mountainTwo {
+    color: #b0b4be;
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-top: 25px;
+    height: 75px;
+    width: 140px;
+    text-align: center;
+  }
+
+  .active-mtn-tabs {
+    background-color: #b0b4be;
+    color: #414f6b;
+    cursor: pointer;
+  }
+  .schedule-section {
+    background: url("../img/climb-hero-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    min-height: 800px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #414f6b;
+  }
+
+  .schedule-box {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 450px;
+    height: 250px;
+    opacity: 80%;
+    margin-left: 300px;
+    margin-top: 100px;
+  }
+
+  .schedule-heading {
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 2em;
+    color: #414f6b;
+  }
+  .schedule-details {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 38px;
+    width: 80%;
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 1.2em;
+  }
+  .schedule-col-1 {
+    width: 50%;
+  }
+
+  .schedule-col-2 {
+    width: 50%;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #414f6b;
+  }
+
+  .footer-logo {
+    width: 50%;
+    display: flex;
+  }
+  .footer-logo-img {
+    margin: 20px;
+  }
+
+  .footer-company {
+    width: 110px;
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.5em;
+    color: #63769d;
+    line-height: 0.8;
+    margin-top: 25px;
+    margin-left: -10px;
+  }
+
+  .copyright {
+    font-family: "Lato", italic;
+    font-size: 0.75em;
+    color: #63769d;
+    margin-right: 20px;
   }
 }
 
