@@ -180,20 +180,17 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
-/******************Mobile Styles******************/
-
-body {
+/* body {
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
+
 .nav-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding-top: 10px;
 }
@@ -204,32 +201,9 @@ nav {
   justify-content: space-between;
 }
 
-.hide {
-  display: none;
-}
-
-.active-nav {
-  background-color: transparent;
-  color: #414f6b;
-}
-
-.active-nav .nav-container li a {
-  color: #414f6b;
-}
-
-.active-nav > .nav-container > li > a:hover {
-  color: #fff;
-}
-
 .homepage-section {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  background: url("../img/hero.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 500px;
+  width: 100%;
+  min-height: 800px;
 }
 
 .homepage-section > nav > ul {
@@ -244,25 +218,6 @@ nav {
   width: 50px;
   padding-top: 10px;
   margin-left: 300px;
-}
-
-.history-section {
-  background: url("../img/history-hero-img.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: auto;
-  min-height: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.history-txt {
-  color: #414f6b;
-  font-family: "Oswald";
-  font-weight: bold;
 }
 
 .mid-logo-section {
@@ -281,13 +236,86 @@ nav {
   color: #414f6b;
 }
 
-.climb-txt {
+.history-tab,
+.team-tab {
+  margin: 14px;
+  font-size: 0.75em;
+}
+
+.logo {
+  width: 45px;
+  padding: 2px;
+}
+
+.los-angeles-mid {
+  width: 100px;
+}
+
+.active-nav {
+  background-color: transparent;
+  color: #414f6b;
+}
+
+.active-nav .nav-container li a {
+  color: #414f6b;
+}
+
+.active-nav > .nav-container > li > a:hover {
+  color: #fff;
+}
+
+.homepage-section {
+  display: flex;
+  justify-content: center;
+  flex-flow: row;
+  background: url("../img/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 500px;
+}
+
+.homepage-section > nav > ul {
+  list-style-type: none;
+}
+
+.header-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.history-section {
+  background: url("../img/history-hero-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.history-txt {
   color: #414f6b;
   font-family: "Oswald";
   font-weight: bold;
-  font-size: 2em;
-  margin-bottom: 0px;
 }
+
+.mid-logo-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  height: 75px;
+}
+
+.mid-section-nav > li {
+  list-style-type: none;
+  color: #414f6b;
+}
+
 
 .history-tab,
 .team-tab {
@@ -421,13 +449,20 @@ nav {
 
 .climb-p {
   width: 60%;
+  font-family: "Lato";
+  font-weight: lighter;
+  font-size: 1em;
 }
 
 .climb-txt {
-  padding: 30px;
-  margin-left: -59px;
-  margin-bottom: -34px;
-}
+    padding: 30px;
+    margin-left: -59px;
+    margin-bottom: -34px;
+    color: #414f6b;
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 2em;
+  }
 
 .los-angeles-mid {
   width: 100px;
@@ -555,7 +590,7 @@ footer {
   font-size: 0.75em;
   color: #63769d;
   margin-right: 20px;
-}
+} */
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -571,6 +606,19 @@ footer {
     align-items: center;
   }
 
+  .homepage-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row;
+    background: url("../img/hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 800px;
+  }
+
   .nav-container {
     display: flex;
     flex-flow: row wrap;
@@ -583,6 +631,26 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+  }
+  .history-tab,
+  .team-tab {
+    color: #fff;
+    margin: 14px;
+    font-family: "Lato";
+    font-size: 0.75em;
+    font-style: italic;
+  }
+  .active-nav {
+    background-color: transparent;
+    color: #414f6b;
+  }
+
+  .active-nav .nav-container li a {
+    color: #414f6b;
+  }
+
+  .active-nav > .nav-container > li > a:hover {
+    color: #fff;
   }
 
   .homepage-section {
@@ -696,7 +764,6 @@ footer {
     opacity: 0.5;
     color: #414f6b;
   }
-
   .climb-section {
     display: flex;
     flex-direction: row;
@@ -706,14 +773,21 @@ footer {
 
   .climb-p {
     width: 60%;
+    font-family: "Lato";
+    font-weight: lighter;
+    font-size: 1em;
   }
 
   .climb-txt {
-    font-size: 2em;
     padding: 30px;
     margin-left: -59px;
     margin-bottom: -34px;
+    color: #414f6b;
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 2em;
   }
+
   .blue-carousel-container {
     display: flex;
     justify-content: center;
