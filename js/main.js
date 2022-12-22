@@ -29,8 +29,8 @@ window.addEventListener("scroll", () => {
 
 //To make schedule change when toggling between Mountain Tabs
 const scheduleSection = document.querySelector(".schedule-section");
-const mountainOne = document.getElementById("mountainOne");
-const mountainTwo = document.getElementById("mountainTwo");
+const mountainOne = document.querySelector(".mountainOne");
+const mountainTwo = document.querySelector(".mountainTwo");
 const scheduleDetails = document.querySelector(".schedule-details");
 const colOneSchedule = document.querySelector(".schedule-col-1");
 
@@ -60,20 +60,3 @@ mountainTwo.addEventListener("click", () => {
   scheduleSection.style.backgroundImage = "url('./img/mountain3.jpg')";
   scheduleSection.style.backgroundSize = "cover";
 });
-
-// For accordion mobile styles
-
-const acc = document.querySelector(".accordion");
-let i;
-
-for (let i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", () => {
-    this.classList.toggle("active");
-    const panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}

@@ -208,18 +208,12 @@ html {
     min-height: 800px;
   }
 
-  .nav-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    align-items: center;
-    padding-top: 10px;
-  }
-
   nav {
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
   }
   .history-tab,
   .team-tab {
@@ -436,38 +430,12 @@ html {
     width: 100%;
     background-color: #414f6b;
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     justify-content: flex-start;
     align-items: center;
-    position: relative;
   }
 
-  .accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-  }
-
-  .active,
-  .accordion:hover {
-    background-color: #ccc;
-  }
-
-  .panel {
-    padding: 0 18px;
-    display: none;
-    background-color: white;
-    overflow: hidden;
-  }
-
-  #mountainOne {
+  .mountainOne {
     color: #b0b4be;
     font-family: "Oswald";
     font-weight: bold;
@@ -479,7 +447,7 @@ html {
     text-align: center;
   }
 
-  #mountainTwo {
+  .mountainTwo {
     color: #b0b4be;
     font-family: "Oswald";
     font-weight: bold;
@@ -495,6 +463,7 @@ html {
     color: #414f6b;
     cursor: pointer;
   }
+
   .schedule-section {
     background: url("../img/climb-hero-img.jpg");
     background-repeat: no-repeat;
