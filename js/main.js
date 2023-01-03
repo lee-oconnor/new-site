@@ -1,21 +1,23 @@
 //Buttoms for making carousel images scroll forward/backwards
 
-const slides = [...document.querySelectorAll(".img-container")];
-const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
-const preBtn = [...document.querySelectorAll(".pre-btn")];
+const slides = document.querySelector(".img-container");
 
-slides.forEach((item, i) => {
-  let containerDimensions = item.getBoundingClientRect();
-  let containerWidth = containerDimensions.width;
+// const slides = [...document.querySelectorAll(".img-container")];
+// const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
+// const preBtn = [...document.querySelectorAll(".pre-btn")];
 
-  nxtBtn[i].addEventListener("click", () => {
-    item.scrollLeft += containerWidth;
-  });
+// slides.forEach((item, i) => {
+//   let containerDimensions = item.getBoundingClientRect();
+//   let containerWidth = containerDimensions.width;
 
-  preBtn[i].addEventListener("click", () => {
-    item.scrollLeft -= containerWidth;
-  });
-});
+//   nxtBtn[i].addEventListener("click", () => {
+//     item.scrollLeft += containerWidth;
+//   });
+
+//   preBtn[i].addEventListener("click", () => {
+//     item.scrollLeft -= containerWidth;
+//   });
+// });
 
 //To make nav link text change color when scrolling
 const nav = document.querySelector("nav");

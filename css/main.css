@@ -549,6 +549,7 @@ footer {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
 /*******************MOBILE STYLES***********************/
 
 @media only screen and (max-width: 768px) {
@@ -650,6 +651,7 @@ footer {
     align-items: center;
   }
 
+  .big-1,
   .big-2 {
     font-size: 3em;
     margin: 0px;
@@ -661,7 +663,7 @@ footer {
   }
 
   .climb-p {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   .schedule-section {
@@ -669,10 +671,12 @@ footer {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    min-height: 500px;
   }
 
   .schedule-box {
-    margin: 0px;
+    margin-top: 15px;
+    margin-left: 0px;
   }
 
   .mountain-tabs {
@@ -681,12 +685,22 @@ footer {
     padding: 0px;
   }
 
-  #mountainOne,
-  #mountainTwo {
+  .mountainOne,
+  .mountainTwo {
     margin-left: 0px;
     padding-top: 0px;
     height: 35px;
     width: 140px;
+  }
+
+  footer {
+    flex-flow: column;
+  }
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+  .copyright {
+    margin-bottom: 15px;
   }
 }
 
