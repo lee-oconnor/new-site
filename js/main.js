@@ -20,7 +20,7 @@ slides.forEach((item, i) => {
 //To make nav link text change color when scrolling
 const nav = document.querySelector("nav");
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= 780) {
+  if (window.scrollY >= 700) {
     nav.classList.add("active-nav");
   } else {
     nav.classList.remove("active-nav");
