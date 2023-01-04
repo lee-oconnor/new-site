@@ -668,7 +668,7 @@ footer {
 
   .schedule-section {
     flex-flow: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100%;
     min-height: 500px;
@@ -681,8 +681,40 @@ footer {
 
   .mountain-tabs {
     justify-content: center;
+    flex-flow: column;
     margin: 0;
     padding: 0px;
+  }
+
+  .panel {
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    padding: 0 18px;
+  }
+
+  .accordion {
+    color: #b0b4be;
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-top: 25px;
+    height: 75px;
+    width: 140px;
+    text-align: center;
+    margin-left: 0px;
+    padding-top: 0px;
+    height: 35px;
+    width: 140px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.4s;
+  }
+
+  .active,
+  .accordion:hover {
+    background-color: lightpink;
   }
 
   .mountainOne,
@@ -701,6 +733,7 @@ footer {
   }
   .copyright {
     margin-bottom: 15px;
+    margin-right: 0px;
   }
 }
 

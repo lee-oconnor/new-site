@@ -1,18 +1,19 @@
-//Buttoms for making carousel images scroll forward/backwards
+/*Buttoms for making carousel images scroll forward/backwards. I found this code through a youtube tutorial- 
+source code for carousel is https://github.com/devression/product-slider */
 
-const slides = [...document.querySelectorAll(".img-container")];
-const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
-const preBtn = [...document.querySelectorAll(".pre-btn")];
+const slides = document.querySelectorAll(".img-container");
+const nxtBtn = document.querySelector(".nxt-btn");
+const preBtn = document.querySelector(".pre-btn");
 
-slides.forEach((item, i) => {
+slides.forEach((item) => {
   let containerDimensions = item.getBoundingClientRect();
   let containerWidth = containerDimensions.width;
 
-  nxtBtn[i].addEventListener("click", () => {
+  nxtBtn.addEventListener("click", () => {
     item.scrollLeft += containerWidth;
   });
 
-  preBtn[i].addEventListener("click", () => {
+  preBtn.addEventListener("click", () => {
     item.scrollLeft -= containerWidth;
   });
 });
@@ -27,7 +28,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-//To make schedule change when toggling between Mountain Tabs
+//To make schedule and image change when toggling between Mountain Tabs
 const scheduleSection = document.querySelector(".schedule-section");
 const mountainOne = document.querySelector(".mountainOne");
 const mountainTwo = document.querySelector(".mountainTwo");
@@ -60,3 +61,40 @@ mountainTwo.addEventListener("click", () => {
   scheduleSection.style.backgroundImage = "url('./img/mountain3.jpg')";
   scheduleSection.style.backgroundSize = "cover";
 });
+
+//Even listener for accordion tabs
+
+//To make tabs into accordion on mobile
+
+const mountainSection = document.querySelector(".mountain-tabs");
+const schedule = document.querySelector(".schedule-box");
+
+if (screen.width < 768) {
+  schedule.classList.add("hidden");
+  mountainSection.innerHTML = "";
+  mountainSection.innerHTML = `
+  <button class="accordion">Mountain 1</button>
+  <div class="panel">
+    <p>Text content here</p>
+  </div>
+  <button class="accordion">Mountain 2</button>
+  <div class="panel">
+    <p>Text content here</p>
+  </div>
+  `;
+
+  const acc = document.getElementsByClassName("accordion");
+  let i;
+
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", () => {
+      this.classList.toggle("active");
+      const panel = document.querySelector(".panel");
+      if (panel.style.display === "block") {
+        panel.style.display === "none";
+      } else {
+        panel.style.display === "block";
+      }
+    });
+  }
+}
