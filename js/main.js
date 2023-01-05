@@ -62,9 +62,7 @@ mountainTwo.addEventListener("click", () => {
   scheduleSection.style.backgroundSize = "cover";
 });
 
-//Even listener for accordion tabs
-
-//To make tabs into accordion on mobile
+//To make tabs into accordion on mobile -- this is still a WIP, and I haven't gotten it to work yet.
 
 const mountainSection = document.querySelector(".mountain-tabs");
 const schedule = document.querySelector(".schedule-box");
