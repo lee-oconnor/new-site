@@ -686,9 +686,11 @@ footer {
     padding: 0px;
   }
 
-  .panel {
+  .panelOne,
+  .panelTwo {
+    width: 200px;
     display: none;
-    background-color: lightpink;
+    background-color: white;
     overflow: hidden;
     padding: 0 18px;
   }
