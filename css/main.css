@@ -688,7 +688,7 @@ footer {
 
   .panel {
     display: none;
-    background-color: white;
+    background-color: lightpink;
     overflow: hidden;
     padding: 0 18px;
   }
@@ -714,7 +714,8 @@ footer {
 
   .active,
   .accordion:hover {
-    background-color: lightpink;
+    background-color: #b0b4be;
+    color: #414f6b;
   }
 
   .mountainOne,

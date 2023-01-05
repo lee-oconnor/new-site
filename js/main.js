@@ -69,32 +69,35 @@ mountainTwo.addEventListener("click", () => {
 const mountainSection = document.querySelector(".mountain-tabs");
 const schedule = document.querySelector(".schedule-box");
 
-if (screen.width < 768) {
-  schedule.classList.add("hidden");
-  mountainSection.innerHTML = "";
-  mountainSection.innerHTML = `
-  <button class="accordion">Mountain 1</button>
-  <div class="panel">
-    <p>Text content here</p>
-  </div>
-  <button class="accordion">Mountain 2</button>
-  <div class="panel">
-    <p>Text content here</p>
-  </div>
-  `;
+const renderAccordions = () => {
+  if (window.width <= 768) {
+    schedule.classList.add("hidden");
+    mountainSection.innerHTML = "";
+    mountainSection.innerHTML = `
+    <button class="accordion">Mountain 1</button>
+//     <div class="panel">
+//       <p>Text content here</p>
+//     </div>
+//  <button class="accordion">Mountain 2</button>
+//     <div class="panel">
+//       <p>Text content here</p>
+//     </div>
+    `;
+    const acc = document.getElementsByClassName("accordion");
+    const panel = document.querySelector(".panel");
+    let i;
 
-  const acc = document.getElementsByClassName("accordion");
-  let i;
-
-  for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", () => {
-      this.classList.toggle("active");
-      const panel = document.querySelector(".panel");
-      if (panel.style.display === "block") {
-        panel.style.display === "none";
-      } else {
-        panel.style.display === "block";
-      }
-    });
+    for (let i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", () => {
+        this.classList.toggle("active");
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
   }
-}
+};
+
+window.addEventListener("resize", renderAccordions);
