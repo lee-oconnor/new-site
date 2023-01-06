@@ -71,8 +71,11 @@ const panelTwo = document.querySelector(".panelTwo");
 
 acc1.addEventListener("click", () => {
   acc1.classList.toggle("active");
+  scheduleSection.style.backgroundImage = "url('./img/climb-hero-img.jpg')";
+  scheduleSection.style.backgroundSize = "cover";
   if (panelOne.style.display === "none") {
     panelOne.style.display = "flex";
+    panelTwo.style.display = "none";
   } else {
     panelOne.style.display = "none";
   }
@@ -80,8 +83,11 @@ acc1.addEventListener("click", () => {
 
 acc2.addEventListener("click", () => {
   acc2.classList.toggle("active");
+  scheduleSection.style.backgroundImage = "url('./img/mountain3.jpg')";
+  scheduleSection.style.backgroundSize = "cover";
   if (panelTwo.style.display === "none") {
     panelTwo.style.display = "flex";
+    panelOne.style.display = "none";
   } else {
     panelTwo.style.display = "none";
   }

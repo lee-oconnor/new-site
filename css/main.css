@@ -710,6 +710,7 @@ footer {
     align-items: center;
     display: none;
     background-color: white;
+    opacity: 80%;
     padding: 20px;
   }
   .panel-col-1 {
@@ -725,7 +726,14 @@ footer {
     flex-flow: column;
     align-items: flex-end;
   }
+
+  .active,
+  .accordion:hover {
+    background-color: #b0b4be;
+    color: #414f6b;
+  }
   .accordion {
+    background-color: #fff;
     color: #b0b4be;
     font-family: "Oswald";
     font-weight: bold;
@@ -747,12 +755,6 @@ footer {
   .schedule-details,
   .schedule-box {
     display: none;
-  }
-
-  .active,
-  .accordion:hover {
-    background-color: #b0b4be;
-    color: #414f6b;
   }
 
   .mountainOne,
