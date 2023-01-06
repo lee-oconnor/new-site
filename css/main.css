@@ -422,6 +422,11 @@ nav {
 .nxt-btn {
   margin-left: 10px;
 }
+
+.accordion-mobile {
+  display: none;
+}
+
 .mountain-tabs {
   width: 100%;
   background-color: #414f6b;
@@ -429,6 +434,11 @@ nav {
   flex-flow: row;
   justify-content: flex-start;
   align-items: center;
+}
+
+.mountain-tabs-desktop {
+  display: flex;
+  flex-flow: row;
 }
 
 .mountainOne {
@@ -675,10 +685,17 @@ footer {
   }
 
   .schedule-box {
-    margin-top: 15px;
-    margin-left: 0px;
+    display: none;
   }
 
+  .accordion-mobile {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .mountain-tabs-desktop {
+    display: none;
+  }
   .mountain-tabs {
     justify-content: center;
     flex-flow: column;
@@ -730,9 +747,14 @@ footer {
 
   footer {
     flex-flow: column;
+    justify-content: center;
+    align-items: center;
   }
   .footer-logo {
     margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .copyright {
     margin-bottom: 15px;
