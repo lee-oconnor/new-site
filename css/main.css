@@ -684,13 +684,11 @@ footer {
     min-height: 500px;
   }
 
-  .schedule-box {
-    display: none;
-  }
-
   .accordion-mobile {
     display: flex;
     flex-flow: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .mountain-tabs-desktop {
@@ -705,13 +703,28 @@ footer {
 
   .panelOne,
   .panelTwo {
-    width: 200px;
+    width: 400px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
     display: none;
     background-color: white;
-    overflow: hidden;
-    padding: 0 18px;
+    padding: 20px;
+  }
+  .panel-col-1 {
+    width: 40%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
   }
 
+  .panel-col-2 {
+    width: 40%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+  }
   .accordion {
     color: #b0b4be;
     font-family: "Oswald";
@@ -729,6 +742,11 @@ footer {
     cursor: pointer;
     outline: none;
     transition: 0.4s;
+  }
+
+  .schedule-details,
+  .schedule-box {
+    display: none;
   }
 
   .active,

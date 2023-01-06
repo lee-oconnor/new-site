@@ -39,10 +39,10 @@ mountainOne.addEventListener("click", () => {
   mountainTwo.classList.remove("active-mtn-tabs");
   mountainOne.classList.add("active-mtn-tabs");
   colOneSchedule.innerHTML = `
-    <span>8 Feb 2017</span><br>
-    <span>22 Feb 2017</span><br>
-    <span>17 Mar 2017</span><br>
-    <span>7 Apr 2017</span>
+  <span>25 Nov 2016</span><br>
+  <span>28 Nov 2016</span><br>
+  <span>18 Dec 2016</span><br>
+  <span>7 Jan 2017</span>
     `;
   scheduleSection.style.backgroundImage = "url('./img/climb-hero-img.jpg')";
   scheduleSection.style.backgroundSize = "cover";
@@ -53,10 +53,10 @@ mountainTwo.addEventListener("click", () => {
   mountainTwo.classList.add("active-mtn-tabs");
   colOneSchedule.innerHTML = "";
   colOneSchedule.innerHTML = `
-    <span>25 Nov 2016</span><br>
-    <span>28 Nov 2016</span><br>
-    <span>18 Dec 2016</span><br>
-    <span>7 Jan 2017</span>
+  <span>8 Feb 2017</span><br>
+  <span>2 Feb 2017</span><br>
+  <span>18 Mar 2017</span><br>
+  <span>7 Apr 2017</span>
   `;
   scheduleSection.style.backgroundImage = "url('./img/mountain3.jpg')";
   scheduleSection.style.backgroundSize = "cover";
@@ -72,7 +72,7 @@ const panelTwo = document.querySelector(".panelTwo");
 acc1.addEventListener("click", () => {
   acc1.classList.toggle("active");
   if (panelOne.style.display === "none") {
-    panelOne.style.display = "block";
+    panelOne.style.display = "flex";
   } else {
     panelOne.style.display = "none";
   }
@@ -81,7 +81,7 @@ acc1.addEventListener("click", () => {
 acc2.addEventListener("click", () => {
   acc2.classList.toggle("active");
   if (panelTwo.style.display === "none") {
-    panelTwo.style.display = "block";
+    panelTwo.style.display = "flex";
   } else {
     panelTwo.style.display = "none";
   }
