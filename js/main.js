@@ -62,45 +62,27 @@ mountainTwo.addEventListener("click", () => {
   scheduleSection.style.backgroundSize = "cover";
 });
 
-//To make tabs into accordion on mobile -- this is still a WIP, and I haven't gotten it to work yet.
+//To make tabs into accordion on mobile --
 
-// const mountainSection = document.querySelector(".mountain-tabs");
-// const schedule = document.querySelector(".schedule-box");
+const acc1 = document.getElementById("acc1");
+const acc2 = document.getElementById("acc2");
+const panelOne = document.querySelector(".panelOne");
+const panelTwo = document.querySelector(".panelTwo");
 
-// const renderAccordions = () => {
-//   if (window.innerWidth <= 768) {
-//     schedule.classList.add("hidden");
-//     mountainSection.innerHTML = "";
-//     mountainSection.innerHTML = `
-//       <button class="accordion">Mountain 1</button>
-//         <div class="panelOne">
-//          <p>Text content here test content here test content here</p>
-//        </div>
-//       <button class="accordion">Mountain 2</button>
-//         <div class="panelTwo">
-//          <p>Lorem Ifdsfdsfd</p>
-//         </div>
-//       `;
-//     const acc = document.getElementsByClassName("accordion");
-//     const panelOne = document.querySelector(".panelOne");
-//     const panelTwo = document.querySelector(".panelTwo");
-//     let i;
+acc1.addEventListener("click", () => {
+  acc1.classList.toggle("active");
+  if (panelOne.style.display === "none") {
+    panelOne.style.display = "block";
+  } else {
+    panelOne.style.display = "none";
+  }
+});
 
-//     for (let i = 0; i < acc.length; i++) {
-//       acc[i].addEventListener("click", () => {
-//         acc[i].classList.toggle("active");
-//         if (panelOne.style.display === "block") {
-//           panelTwo.style.display = "none";
-//         } else if (panelTwo.style.display === "block") {
-//           panelTwo.style.display = "none";
-//         } else if (panelOne.style.display === "none") {
-//           panelOne.style.display = "block";
-//         } else if (panelTwo.style.display === "none") {
-//           panelTwo.style.display = "block";
-//         }
-//       });
-//     }
-//   }
-// };
-
-// window.addEventListener("resize", renderAccordions);
+acc2.addEventListener("click", () => {
+  acc2.classList.toggle("active");
+  if (panelTwo.style.display === "none") {
+    panelTwo.style.display = "block";
+  } else {
+    panelTwo.style.display = "none";
+  }
+});
